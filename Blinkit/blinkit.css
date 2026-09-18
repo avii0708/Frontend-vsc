@@ -1,0 +1,311 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            height: 105px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 0 35px;
+            gap: 30px;
+        }
+
+        .logo {
+            width: 180px;
+            font-size: 48px;
+            font-weight: bold;
+            color: #f8c832;
+        }
+
+        .delivery {
+            width: 310px;
+            border-left: 1px solid #eee;
+            padding-left: 55px;
+        }
+
+        .delivery h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .delivery p {
+            font-size: 16px;
+        }
+
+        .search {
+            flex: 1;
+            height: 60px;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .search span {
+            font-size: 28px;
+            margin-right: 15px;
+        }
+
+        .search input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 18px;
+        }
+
+        .login {
+            font-size: 20px;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .cart {
+            background: #e5e5e5;
+            color: white;
+            padding: 18px 25px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            width: 90%;
+            max-width: 1400px;
+            margin: 15px auto;
+        }
+
+        /* Big Banner */
+
+        .main-banner {
+            height: 175px;
+            border-radius: 9px;
+            overflow: hidden;
+            background: linear-gradient(90deg, #257b35, #61c26b);
+            position: relative;
+            padding: 20px 27px;
+            color: white;
+        }
+
+        .main-banner h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .main-banner p {
+            font-size: 20px;
+            line-height: 1.3;
+            width: 480px;
+        }
+
+        .shop-btn {
+            margin-top: 17px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .vegetables {
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            font-size: 90px;
+        }
+
+        /* ================= SMALL BANNERS ================= */
+
+        .banner-row {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            overflow: hidden;
+        }
+
+        .small-banner {
+            min-width: 32%;
+            height: 245px;
+            border-radius: 18px;
+            padding: 28px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blue {
+            background: linear-gradient(135deg, #4669cf, #17359d);
+            color: white;
+        }
+
+        .cyan {
+            background: linear-gradient(135deg, #17c5bd, #08a9a8);
+            color: white;
+        }
+
+        .yellow {
+            background: #ffcc28;
+            color: #333;
+        }
+
+        .light {
+            background: #dbe6f5;
+            color: #333;
+        }
+
+        .small-banner h2 {
+            font-size: 29px;
+            width: 280px;
+            line-height: 1.1;
+        }
+
+        .small-banner p {
+            margin-top: 15px;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+
+        .order-btn {
+            position: absolute;
+            bottom: 28px;
+            left: 20px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .yellow .order-btn,
+        .light .order-btn {
+            background: #333;
+            color: white;
+        }
+
+        .banner-icon {
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+            font-size: 100px;
+        }
+
+        /* ================= CATEGORIES ================= */
+
+        .categories {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+            overflow-x: auto;
+            padding-bottom: 15px;
+        }
+
+        .category {
+            min-width: 125px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category-image {
+            width: 125px;
+            height: 125px;
+            background: #f1f6ff;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 65px;
+            margin-bottom: 12px;
+        }
+
+        .category p {
+            font-size: 17px;
+            line-height: 1.2;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                height: auto;
+                padding: 15px;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .logo {
+                width: auto;
+                font-size: 35px;
+            }
+
+            .delivery {
+                width: auto;
+                padding-left: 15px;
+            }
+
+            .search {
+                order: 5;
+                width: 100%;
+                flex: none;
+            }
+
+            .banner-row {
+                overflow-x: auto;
+            }
+
+            .small-banner {
+                min-width: 320px;
+            }
+
+            .categories {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .login {
+                display: none;
+            }
+
+            .cart {
+                padding: 12px;
+            }
+
+            main {
+                width: 95%;
+            }
+
+            .main-banner {
+                height: 220px;
+            }
+
+            .main-banner h1 {
+                font-size: 25px;
+            }
+
+            .main-banner p {
+                width: 250px;
+                font-size: 16px;
+            }
+
+            .vegetables {
+                font-size: 55px;
+            }
+        }
