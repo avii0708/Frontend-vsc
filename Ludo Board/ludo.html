@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ludo Board</title>
+    <link rel="stylesheet" href="ludo.css">
+
+</head>
+<body>
+
+    <div class="ludo-board">
+
+        <!-- Red Home -->
+        <div class="red-home">
+            <div class="home-inner">
+                <div class="token red-token"></div>
+                <div class="token red-token"></div>
+                <div class="token red-token"></div>
+                <div class="token red-token"></div>
+            </div>
+        </div>
+
+        <!-- Green Home -->
+        <div class="green-home">
+            <div class="home-inner">
+                <div class="token green-token"></div>
+                <div class="token green-token"></div>
+                <div class="token green-token"></div>
+                <div class="token green-token"></div>
+            </div>
+        </div>
+
+        <!-- Yellow Home -->
+        <div class="yellow-home">
+            <div class="home-inner">
+                <div class="token yellow-token"></div>
+                <div class="token yellow-token"></div>
+                <div class="token yellow-token"></div>
+                <div class="token yellow-token"></div>
+            </div>
+        </div>
+
+        <!-- Blue Home -->
+        <div class="blue-home">
+            <div class="home-inner">
+                <div class="token blue-token"></div>
+                <div class="token blue-token"></div>
+                <div class="token blue-token"></div>
+                <div class="token blue-token"></div>
+            </div>
+        </div>
+
+        <!-- Center -->
+        <div class="center"></div>
+
+    </div>
+
+    <div class="game">
+        <div id="dice">🎲 1</div>
+        <button onclick="rollDice()">Roll Dice</button>
+    </div>
+
+    <script>
+        function rollDice() {
+            let number = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("dice").innerHTML = "🎲 " + number;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #172033;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main Ludo Board */
+.ludo-board {
+    width: 600px;
+    height: 600px;
+    background: white;
+    border: 10px solid #333;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 40% 20% 40%;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Common Home Area */
+.red-home,
+.green-home,
+.yellow-home,
+.blue-home {
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Red */
+.red-home {
+    background: #e53935;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+/* Green */
+.green-home {
+    background: #19a65a;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Yellow */
+.yellow-home {
+    background: #f5b400;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* Blue */
+.blue-home {
+    background: #1688d4;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/* Inner white area */
+.home-inner {
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    padding: 25px;
+}
+
+/* Tokens */
+.token {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    align-self: center;
+    justify-self: center;
+
+    border: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Token Colors */
+.red-token {
+    background: #d71920;
+}
+
+.green-token {
+    background: #00a651;
+}
+
+.yellow-token {
+    background: #ffb800;
+}
+
+.blue-token {
+    background: #087ac1;
+}
+
+/* Center */
+.center {
+    grid-column: 2;
+    grid-row: 2;
+
+    background: conic-gradient(
+        #e53935 0deg 90deg,
+        #f5b400 90deg 180deg,
+        #1688d4 180deg 270deg,
+        #19a65a 270deg 360deg
+    );
+
+    border: 2px solid #333;
+}
+
+/* Dice Section */
+.game {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#dice {
+    background: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .ludo-board {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .ludo-board {
+        border-width: 5px;
+    }
+
+    .red-home,
+    .green-home,
+    .yellow-home,
+    .blue-home {
+        padding: 15px;
+    }
+
+    .home-inner {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .token {
+        width: 25px;
+        height: 25px;
+    }
+}
